@@ -1,26 +1,44 @@
-Linux-Kernel-Tuning-and-Hardening
+Linux-Kernel-Tuning
 =================================
+
+# For Centos 
 
 Bash script for optimizing performance and hardening Linux kernel by adjusting the kernel parameters. It is self-explained and not supposed to be a one-thing-fit-all script. You should see the script for yourself and adjust the values for your need. Use it with caution. 
 
 ### Usage
 
-###### 1. Download the script to a folder on your Linux machine (eg.: /root/scripts/), then execute it
+###### 1. Download the script to a folder on your Centos Linux machine (eg.: /opt/), then execute it
 
 ```bash
-wget https://raw.github.com/minhdanh/Linux-Kernel-Tuning-and-Hardening/master/kernel_hardening_tuning.sh
-chmod +x kernel_hardening_tuning.sh
-./kernel_hardening_tuning.sh
+wget https://raw.githubusercontent.com/djanedu/kernel_tuning/master/kernel_tuning_centos.sh 
+chmod +x ./kernel_tuning_centos.sh
+./kernel_tuning_centos.sh
+
 ```
 
 ###### 2. Allow the script to run everytime the system starts
 
 ````bash
+mv ./kernel_tuning_centos.sh  /opt/
 vim /etc/rc.local
 
 # Add the following line:
-/root/scripts/kernel_hardening_tuning.sh
+/opt/kernel_tuning_centos.sh
 ````
+
+# For Ubuntu
+
+### Usage
+
+###### 1. Download the script to a folder on your Ubuntu Linux machine then execute it
+
+```bash
+wget https://raw.githubusercontent.com/djanedu/kernel_tuning/master/kernel_tuning_ubuntu.sh
+chmod +x ./kernel_tuning_ubuntu.sh
+./kernel_tuning_ubuntu.sh
+
+```
+
 
 ### References
 
