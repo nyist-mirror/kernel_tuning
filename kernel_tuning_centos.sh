@@ -61,6 +61,8 @@ echo "0" > /proc/sys/net/ipv4/conf/default/secure_redirects
 echo "1" > /proc/sys/net/ipv4/conf/all/log_martians
 # Protect from ICMP attacks 
 echo "1" > /proc/sys/net/ipv4/icmp_echo_ignore_broadcasts
+
+echo "1" > /proc/sys/net/ipv4/icmp_ignore_bogus_error_responses
 # Enable RFC-recommended source validation (should not be used on machines which are routers for very complicated networks)
 echo "1" > /proc/sys/net/ipv4/conf/all/rp_filter
 echo "1" > /proc/sys/net/ipv4/conf/default/rp_filter
@@ -83,3 +85,5 @@ echo "20" > /proc/sys/vm/dirty_background_ratio
 #
 echo "25" > /proc/sys/vm/dirty_ratio
 
+
+echo "0" > /proc/sys/net/ipv4/conf/all/rp_filter

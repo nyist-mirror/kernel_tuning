@@ -1,5 +1,4 @@
 #!/bin/bash
-kernel_tuning() {
 echo '
 # Syncookies make SYN flood attacks ineffective
 net.ipv4.tcp_syncookies = 1
@@ -69,6 +68,4 @@ root hard nofile 256000
 grep  "session required pam_limits.so" /etc/pam.d/common-session >/dev/null || {
 	echo 'session required pam_limits.so' >> /etc/pam.d/common-session
 }
-}
 
-kernel_tuning;
